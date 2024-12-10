@@ -1,11 +1,71 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/main-layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout>
+<main class="body-container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Offering web design and accessibility consulting</h1>
+                <p>
+                    Empowering brands with inclusive design strategies that drive innovation and connection. From
+                    accessibility audits to UX design, we help you create experiences that everyone can enjoy.
+                    Leverage inclusive frameworks to deliver powerful digital solutions.
+                    Our tailored approaches to design and strategy foster collaboration, enhance usability, and align
+                    with your organizational goals.
+
+                </p>
+                <button>Learn About VIA</button>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="services">
+
+                <div>
+                    <h2>Services</h2>
+                    <p>Our services are designed to help you create inclusive digital experiences that drive innovation
+                        and connection.</p>
+
+                </div>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h3>Accessibility Audits</h3>
+                        <p>Our team of experts will help you identify and address accessibility barriers in your digital
+                            products and services.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>UX Design</h3>
+                        <p>Our user-centered design approach ensures that your digital products are intuitive, engaging,
+                            and accessible to all users.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Training & Workshops</h3>
+                        <p>Our customized training programs and workshops will help your team develop the skills and
+                            knowledge needed to create inclusive digital experiences.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Training & Workshops</h3>
+                        <p>Our customized training programs and workshops will help your team develop the skills and
+                            knowledge needed to create inclusive digital experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="work-samples">
+                <div class="sample-card">
+                    <img src="/images/website1.jpg" alt="">
+                    <h3>Website Design</h3>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</MainLayout>

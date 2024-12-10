@@ -1,0 +1,192 @@
+---
+const {title} = Astro.props;
+console.log(title);
+---
+
+<html lang="en">
+<>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="/css/stylesheet.css" rel="stylesheet">
+    <script defer src="../components/NavigationBar.js" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <meta title="" />
+
+</head>
+
+<body>
+           `<header>
+        <nav class="navigation">
+            <logo>
+                VïA
+            </logo>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>`
+    <slot />
+
+    
+
+</body>
+</>
+</html>
+<style is:global>
+:root {
+  --off-white: #fafafa;
+  --dark-grey: #6c757d;
+  --onyx-black: #1d1d1d;
+  --accent: #f1c21b;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 auto;
+  font-size: clamp(0.75rem, 1rem, 1.5rem);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.5rem, 4rem);
+  line-height: 100%;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2rem, 2.5rem);
+  line-height: clamp(1.5rem, 1.7rem, 3rem);
+  font-weight: 400;
+}
+
+h3{
+    font-weight:400;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7% 0 7%;
+  max-height: 60px;
+  background-color: var(--onyx-black);
+  color:var(--off-white);
+}
+logo{
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 400;
+    color:var(--off-white);
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-self: center;
+  padding: 20px 40px;
+  font-weight: 500;
+  color:var(--off-white);
+
+}
+
+.navigation ul a {
+    color:var(--off-white);
+    text-decoration: none;
+}
+
+button{
+    background-color: var(--accent);
+    color:var(--onyx-black);
+    font-weight: 500; 
+    padding: 10px 20px; 
+    border-radius: 30px;
+    min-height: 50px;
+    min-width:44px;
+    box-shadow: none;
+    border: none;
+
+}
+button:hover{
+    background-color: var(--accent);
+    color:var(--onyx-black);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section{
+    box-sizing: border-box;
+    padding: 0rem 7% 0 7%;
+
+}
+.hero {
+    box-sizing:border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--onyx-black);
+  color: var(--off-white);
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position-y: 98%;
+  background-repeat: no-repeat;
+}
+
+.hero-text {
+  width: 60%;
+}
+.hero-text h1{
+
+    margin-bottom: 1px;
+}
+
+.services {
+  display: flex;
+  gap: 6rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  gap: 3rem;
+}
+.service-card {
+  flex-direction: column;
+  gap: 1px;
+}
+@media (min-width: 900px) and (max-width: 1500px){
+
+    
+}
+</style>
